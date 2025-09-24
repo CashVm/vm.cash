@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "framework": null,
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/", "destination": "/opcodes", "permanent": false }
+  ],
+  "rewrites": [{ "source": "/opcodes", "destination": "/index.html" }]
+}

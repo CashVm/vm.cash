@@ -1,0 +1,33 @@
+{
+  "version": "0.2",
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
+  "language": "en",
+  "words": [
+    "fontsource",
+    "happydom",
+    "INPUTSEQUENCENUMBER",
+    "LSHIFTBIN",
+    "OUTPOINTINDEX",
+    "OUTPOINTTXHASH",
+    "registrator",
+    "RSHIFTBIN",
+    "TXINPUTCOUNT",
+    "TXLOCKTIME",
+    "TXOUTPUTCOUNT"
+  ],
+  "flagWords": [],
+  "ignorePaths": [
+    ".cspell.json",
+    "package.json",
+    "yarn.lock",
+    "tsconfig.json",
+    "node_modules/**"
+  ],
+  "patterns": [
+    {
+      "name": "cash-address-format",
+      "pattern": "/(?:bitcoincash|bchtest|bchreg|secret-key):[qpzry9x8gf2tvdw0s3jn54khce6mua7l]+/g"
+    }
+  ],
+  "ignoreRegExpList": ["Base64", "HexValues", "cash-address-format"]
+}

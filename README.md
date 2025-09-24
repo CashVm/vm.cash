@@ -1,21 +1,16 @@
-# bun-react-tailwind-shadcn-template
+# vm.cash
 
-To install dependencies:
+An open source, volunteer-maintained reference for the Bitcoin Cash virtual machine (CashVM).
 
-```bash
-bun install
-```
-
-To start a development server:
+## Getting Started
 
 ```bash
-bun dev
+bun install           # install dependencies
+bun dev               # start the development server with HMR
+bun test              # run tests
+bun run build         # create the production bundle in ./dist
 ```
 
-To run for production:
+## Contributing
 
-```bash
-bun start
-```
-
-This project was created using `bun init` in bun v1.2.22. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Issues and PRs are welcome.

@@ -1,10 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
-    <title>Bun + React</title>
+    <title>CashVM Opcodes | Bitcoin Cash</title>
+    <meta name="application-name" content="CashVM Opcodes" />
+    <meta name="apple-mobile-web-app-title" content="CashVM Opcodes" />
+    <meta
+      name="description"
+      content="Opcode reference for the Bitcoin Cash virtual machine, including technical specifications for the 2015, 2016, 2018, 2020, 2022, 2023, and 2026 upgrades."
+    />
+    <meta name="theme-color" content="#24282a" />
+    <link rel="canonical" href="https://vm.cash/opcodes" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link
+      rel="manifest"
+      href="./assets/site.webmanifest"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/fira-sans-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/fira-sans-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/fira-mono-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/fonts.css"
+      as="style"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="./fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./fonts/fonts.css" />
+    </noscript>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CashVM Opcodes" />
+    <meta property="og:url" content="https://vm.cash/opcodes" />
+    <meta property="og:title" content="CashVM Opcodes | Bitcoin Cash" />
+    <meta
+      property="og:description"
+      content="Opcode reference for the Bitcoin Cash virtual machine, including technical specifications for the 2015, 2016, 2018, 2020, 2022, 2023, and 2026 upgrades."
+    />
+    <meta property="og:image" content="https://vm.cash/opcodes-preview.png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://vm.cash/opcodes-preview.png"
+    />
+    <meta property="og:image:width" content="3200" />
+    <meta property="og:image:height" content="2040" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="Screenshot of the CashVM Hex Matrix opcode reference."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CashVM Opcodes | Bitcoin Cash" />
+    <meta
+      name="twitter:description"
+      content="Opcode reference for the Bitcoin Cash virtual machine, including technical specifications for the 2015, 2016, 2018, 2020, 2022, 2023, and 2026 upgrades."
+    />
+    <meta name="twitter:site" content="@bitjson" />
+    <meta name="twitter:creator" content="@bitjson" />
+    <meta name="twitter:image" content="https://vm.cash/opcodes-preview.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Screenshot of the CashVM opcode reference."
+    />
     <script type="module" src="./frontend.tsx" async></script>
   </head>
   <body>

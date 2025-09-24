@@ -1,39 +1,23 @@
-import { serve } from "bun";
-import index from "./index.html";
+import { serve } from 'bun';
+import index from './index.html';
 
 const server = serve({
   routes: {
-    // Serve index.html for all unmatched routes.
-    "/*": index,
-
-    "/api/hello": {
-      async GET(req) {
-        return Response.json({
-          message: "Hello, world!",
-          method: "GET",
-        });
-      },
-      async PUT(req) {
-        return Response.json({
-          message: "Hello, world!",
-          method: "PUT",
-        });
-      },
-    },
-
-    "/api/hello/:name": async req => {
-      const name = req.params.name;
-      return Response.json({
-        message: `Hello, ${name}!`,
-      });
+    '/': () => Response.redirect('/opcodes', 307),
+    '/opcodes': index,
+    '/opcodes/*': index,
+    '/*': async (req) => {
+      const pathname = new URL(req.url).pathname;
+      for (const prefix of ['.', './assets', './assets-no-hash', './fonts']) {
+        const file = Bun.file(new URL(`${prefix}${pathname}`, import.meta.url));
+        if (await file.exists()) return new Response(file);
+      }
+      return new Response('Not Found', { status: 404 });
     },
   },
 
-  development: process.env.NODE_ENV !== "production" && {
-    // Enable browser hot reloading in development
+  development: process.env.NODE_ENV !== 'production' && {
     hmr: true,
-
-    // Echo console logs from the browser to the server
     console: true,
   },
 });

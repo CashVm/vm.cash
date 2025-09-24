@@ -1,0 +1,23 @@
+{
+  "name": "CashVM Opcodes",
+  "short_name": "CashVM",
+  "description": "Opcode reference for the Bitcoin Cash virtual machine covering the 2009–2026 upgrades.",
+  "lang": "en",
+  "start_url": "/opcodes",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#24282a",
+  "background_color": "#1d2023",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
