@@ -1,4 +1,5 @@
 import { OpcodesPage } from './opcodes/OpcodesPage';
+import { Analytics } from '@vercel/analytics/react';
 import './index.css';
 
 export function App() {
@@ -11,7 +12,12 @@ export function App() {
     }
   }
 
-  return <OpcodesPage />;
+  return (
+    <>
+      <OpcodesPage />
+      <Analytics />
+    </>
+  );
 }
 
 export default App;
