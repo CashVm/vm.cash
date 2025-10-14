@@ -992,25 +992,15 @@ function catToClass(category: Category): string {
 }
 
 function legend() {
-  const items: Array<[string, string]> = [
-    ['push-num', 'Push (Number)'],
-    ['push-byte', 'Push (Bytes)'],
-    ['stack', 'Stack'],
-    ['binary', 'Bitwise'],
-    ['arith', 'Arithmetic'],
-    ['control', 'Control'],
-    ['crypto', 'Crypto'],
-    ['intro', 'Introspection'],
-    ['token', 'Tokens'],
-    ['res', 'Unknown'],
-  ];
-
-  return items.map(([cls, label]) => (
-    <span key={cls}>
-      <i className={`sw ${cls}`} aria-hidden="true" />
-      {label}
-    </span>
-  ));
+  return CATEGORIES.map((category) => {
+    const className = catToClass(category);
+    return (
+      <span key={category}>
+        <i className={`sw ${className}`} aria-hidden="true" />
+        {displayCategoryName(category)}
+      </span>
+    );
+  });
 }
 
 export { filterRows, parseOpcodeIdentifier };
